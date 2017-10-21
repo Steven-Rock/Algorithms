@@ -1,15 +1,18 @@
-package com.swr;
+package com.swr.algorythms.sort;
+
+import java.util.HashMap;
 
 /**
  * Created by srockny16 on 4/4/2017.
  */
-public class SelectionSort {
+public class InsertionSort {
 
     public static void main(String[] args) {
 
         int[] arr = new int[]{5,3,7,12,2, 24, 109, 15, 23, 49, 39, 69, 41, 1};
 
-        SelectionSort sort = new SelectionSort();
+        HashMap map = new HashMap();
+        InsertionSort sort = new InsertionSort();
         sort.sort(arr);
 
 
@@ -25,46 +28,40 @@ public class SelectionSort {
     // when nothing swaps, algo is done
     public void sort(int[] arr) {
 
-       // if (arr == null || arr.length < 1 return;
+        // if (arr == null || arr.length < 1 return;
 
         int minI = 0;
         int max = arr.length - 1;
-        for (int i = max; i >= 0; i--) {
-            for (int j = 0; j <= i ; j++) {
-                minI = decendingSwap(j, minI, arr);
+        for (int i = 1; i <= max; i++) {
+            for (int j = i; j > 0; j--) {
+                ascendingSwap(j, j - 1, arr);
             }
-            swap(i, minI, arr);
+
         }
 
         this.toString(arr);
 
-
-        minI = 0;
         max = arr.length - 1;
-        for (int i = max; i >= 0; i--) {
-            for (int j = 0; j <= i ; j++) {
-                minI = ascendingSwap(j, minI, arr);
+        for (int i = 1; i <= max; i++) {
+            for (int j = i; j > 0; j--) {
+                decendingSwap(j, j - 1, arr);
             }
-            swap(i, minI, arr);
+
         }
 
         this.toString(arr);
     }
 
-    private int decendingSwap(int j, int k, int[] arr ) {
-        if (arr[j] < arr[k]) {
-            k = j;
+    private void decendingSwap(int j, int k, int[] arr ) {
+        if (arr[j] > arr[k]) {
+            swap(j, k, arr);
         }
-
-        return k;
     }
 
-    private int ascendingSwap(int j, int k, int[] arr ) {
-        if (arr[j] > arr[k]) {
-            k = j;
+    private void ascendingSwap(int j, int k, int[] arr ) {
+        if (arr[j] < arr[k]) {
+            swap(j, k, arr);
         }
-
-        return k;
     }
 
     private void swap(int i, int j, int[] arr ) {
@@ -82,3 +79,4 @@ public class SelectionSort {
         System.out.println("*************");
     }
 }
+

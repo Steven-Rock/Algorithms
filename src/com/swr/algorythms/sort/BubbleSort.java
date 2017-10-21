@@ -1,4 +1,4 @@
-package com.swr;
+package com.swr.algorythms.sort;
 
 /**
  * Created by srockny16 on 4/4/2017.

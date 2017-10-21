@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * Created by srockny16 on 4/4/2017.
  */
-public class InsertionSort {
+public class InsertionSort extends AbstractSort {
 
     public static void main(String[] args) {
 
@@ -62,21 +62,6 @@ public class InsertionSort {
         if (arr[j] < arr[k]) {
             swap(j, k, arr);
         }
-    }
-
-    private void swap(int i, int j, int[] arr ) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
-    public void toString(int[] arr){
-
-        System.out.println("*************");
-        for(int i:arr) {
-            System.out.println(i);
-        }
-        System.out.println("*************");
     }
 }
 

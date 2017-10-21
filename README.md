@@ -13,7 +13,9 @@ All three algorithms share common functionality. They all perform nested double 
 A Triangle swap is simply the use of one temp variable, and the two input variables. If these are aligned on the points of a triangle, they are swaped with the variable next to them. This enables swapping Var1 with Var2.
 
 Temp = Var1
+
 Var1 = Var2
+
 Var 2 = Temp
 
 - [ ] BubbleSort

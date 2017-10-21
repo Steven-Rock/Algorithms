@@ -3,7 +3,7 @@ package com.swr.algorithms.sort;
 /**
  * Created by srockny16 on 4/4/2017.
  */
-public class BubbleSort{
+public class BubbleSort extends AbstractSort{
 
     public static void main(String[] args) {
 
@@ -35,7 +35,7 @@ public class BubbleSort{
                 count++;
             }
         }
-        this.toString(arr, count);
+        this.toString(arr);
 
         count = 0;
         max = arr.length - 1;
@@ -45,7 +45,7 @@ public class BubbleSort{
                 count++;
             }
         }
-        this.toString(arr, count);
+        this.toString(arr);
 
 
         return arr;
@@ -62,21 +62,5 @@ public class BubbleSort{
         if (arr[j] > arr[j + 1]) {
             swap(j, j + 1, arr);
         }
-    }
-
-
-    private void swap(int i, int j, int[] arr ) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
-    public void toString(int[] arr, int count){
-
-        System.out.println("************* " + count + " steps");
-        for(int i:arr) {
-            System.out.println(i);
-        }
-        System.out.println("*************");
     }
 }

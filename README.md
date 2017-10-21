@@ -10,13 +10,20 @@ testbed for understanding algorithms from a deeper level through the code.
 
 All three algorithms share common functionality. They all perform nested double looping over the data, hence O(n^2) in big O notation. They perform some type of comparision between two elements. Then what I call a Triangle swap occurs if the elements are out of order.
 
-A Triangle swap is simply the use of one temp variable, and the two input variables. If these are aligned on the points of a triangle, they are swaped with the variable next to them. This enables swapping Var1 with Var2.
+A Triangle (or array inline) swap is simply the use of one temp variable, and the two input variables. If these are aligned on the points of a triangle, they are swaped with the variable next to them. This enables swapping Var1 with Var2.
 
 Temp = Var1
 
 Var1 = Var2
 
 Var 2 = Temp
+
+## Example array inline swap
+protected void swap(int i, int j, int[] arr ) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
 
 - [ ] BubbleSort
 - [ ] InsertionSort

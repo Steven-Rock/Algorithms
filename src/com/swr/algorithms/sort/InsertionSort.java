@@ -1,4 +1,4 @@
-package com.swr.algorythms.sort;
+package com.swr.algorithms.sort;
 
 import java.util.HashMap;
 

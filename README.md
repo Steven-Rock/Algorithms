@@ -20,10 +20,11 @@ Var 2 = Temp
 
 ## Example array inline swap
 protected void swap(int i, int j, int[] arr ) {
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
+<br/>
+    int temp = arr[i];<br/>
+    arr[i] = arr[j];<br/>
+    arr[j] = temp;<br/>
+}<br/>
 
 - [ ] BubbleSort
 - [ ] InsertionSort
